@@ -3,3 +3,8 @@
 :queues:
   - default
   - movies
+:schedule:
+  AddOneFakeMovie:
+    cron: '0 0 0 2 * *'
+    class: CreateMovieWorker
+    queue: movies
