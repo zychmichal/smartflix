@@ -1,4 +1,4 @@
 require 'rails_helper'
-RSpec.describe CreateMovieWorker, type: :worker do
+RSpec.describe CreateMovieIfExistWorker, type: :worker do
   pending "add some examples to (or delete) #{__FILE__}"
 end

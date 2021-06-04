@@ -6,7 +6,7 @@
   - movies
 :schedule:
   AddOneFakeMovie:
-    cron: '0 * 0 2 * *'
+    cron: '0 0 0 2 * *' # every 2nd day of month at 12:00 pm
     #cron: '0 * * * * *' # cron for test (every minute)
     class: CreateMovieWorker
     queue: movies
