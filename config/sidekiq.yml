@@ -1,10 +1,12 @@
 ---
+# cron format: <seconds> <minutes> <hours> <days of month> <months> <days of week> <years>
 :concurrency: 3
 :queues:
   - default
   - movies
 :schedule:
   AddOneFakeMovie:
-    cron: '0 0 0 2 * *'
+    cron: '0 * 0 2 * *'
+    #cron: '0 * * * * *' # cron for test (every minute)
     class: CreateMovieWorker
     queue: movies
