@@ -12,7 +12,7 @@ RSpec.describe AddMovieFromApiService do
       let(:json_response) { File.open("spec/fixtures/json/title_harry_without_year.json") }
       it "create movie without year in request" do
         stub_request(:get, actual_url).to_return(status: 200, body: json_response)
-        expect {subject.add_movie_by_title("Harry")}.to change{Movie.count}.from(0).to(1)
+        expect {subject.add_movie_by_title_and_year("Harry")}.to change{Movie.count}.from(0).to(1)
         expect(Movie.first.title).to eq("Harry Potter and the Deathly Hallows: Part 2")
       end
     end
@@ -22,7 +22,7 @@ RSpec.describe AddMovieFromApiService do
       let(:json_response) { File.open("spec/fixtures/json/movie_not_found_response.json") }
       it "doesn't create movie when movie title doesn't found in omdbapi" do
         stub_request(:get, actual_url).to_return(status: 200, body: json_response)
-        expect{subject.add_movie_by_title("not_existing_movie")}.to change{Movie.count}.by(0)
+        expect{subject.add_movie_by_title_and_year("not_existing_movie")}.to change{Movie.count}.by(0)
       end
     end
 
@@ -31,7 +31,7 @@ RSpec.describe AddMovieFromApiService do
       let(:json_response) { File.open("spec/fixtures/json/title_harry_year_2010.json") }
       it "add movie to database with year in request if response is success" do
         stub_request(:get, actual_url).to_return(status: 200, body: json_response)
-        expect {subject.add_movie_by_title("Harry", 2010)}.to change{Movie.count}.from(0).to(1)
+        expect {subject.add_movie_by_title_and_year("Harry", 2010)}.to change{Movie.count}.from(0).to(1)
         expect(Movie.first.title).to eq("Harry Potter and the Deathly Hallows: Part 1")
       end
     end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_04_065726) do
+ActiveRecord::Schema.define(version: 2021_06_11_134819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,30 @@ ActiveRecord::Schema.define(version: 2021_06_04_065726) do
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "year"
+    t.string "rated"
+    t.date "released"
+    t.integer "runtime"
+    t.string "genre"
+    t.string "director"
+    t.string "writer"
+    t.string "actors"
+    t.text "plot"
+    t.string "language"
+    t.string "country"
+    t.string "awards"
+    t.string "poster"
+    t.text "ratings"
+    t.integer "metascore"
+    t.float "imdb_rating"
+    t.bigint "imdb_votes"
+    t.string "imdb_id"
+    t.string "movie_type"
+    t.date "dvd"
+    t.string "box_office"
+    t.string "production"
+    t.string "website"
+    t.index ["title"], name: "index_movies_on_title"
   end
 
 end
