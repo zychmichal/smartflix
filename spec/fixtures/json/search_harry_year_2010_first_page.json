@@ -1,0 +1,76 @@
+{
+  "Search": [
+    {
+      "Title": "Harry, un ami qui vous veut du bien",
+      "Year": "2000",
+      "imdbID": "tt0216800",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTgxMTE4MTYzNl5BMl5BanBnXkFtZTYwNTE4OTI5._V1_SX300.jpg"
+    },
+    {
+      "Title": "Wild About Harry",
+      "Year": "2000",
+      "imdbID": "tt0216279",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjAwOTkzNjM1OV5BMl5BanBnXkFtZTYwMTcwMzg5._V1_SX300.jpg"
+    },
+    {
+      "Title": "The Magical World of Harry Potter: The Unauthorized Story of J.K. Rowling",
+      "Year": "2000",
+      "imdbID": "tt0308533",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjE4MTM1NTUyNV5BMl5BanBnXkFtZTgwNDgyMzI2NTE@._V1_SX300.jpg"
+    },
+    {
+      "Title": "Harry Saltzman: Showman",
+      "Year": "2000",
+      "imdbID": "tt0322503",
+      "Type": "movie",
+      "Poster": "N/A"
+    },
+    {
+      "Title": "Harry Hill: Birdstrike!",
+      "Year": "2000",
+      "imdbID": "tt0335588",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOGZjNmE4NTYtZDA3OC00NzYyLTgxYjgtMzRmODFiNjk2MDEzL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTgwOTE5NDk@._V1_SX300.jpg"
+    },
+    {
+      "Title": "Sci-Fi Harry",
+      "Year": "2000–2001",
+      "imdbID": "tt3337196",
+      "Type": "series",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ4ZmM5MjMtZTA0Ni00ZGQ5LTk2MzktZDY2ZTY4M2I5ZDBhXkEyXkFqcGdeQXVyMzM4MjM0Nzg@._V1_SX300.jpg"
+    },
+    {
+      "Title": "Harry & Co",
+      "Year": "2000",
+      "imdbID": "tt0311264",
+      "Type": "movie",
+      "Poster": "N/A"
+    },
+    {
+      "Title": "Huge Harry and the Institute of Artificial Art",
+      "Year": "2000",
+      "imdbID": "tt0353540",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZjAwNjlkOTktZmNjMS00OTE5LWJkNjMtNmQ0MGNjZjgxYTVhXkEyXkFqcGdeQXVyNDAxOTA3NTI@._V1_SX300.jpg"
+    },
+    {
+      "Title": "Mad About Harry",
+      "Year": "2000",
+      "imdbID": "tt0808360",
+      "Type": "movie",
+      "Poster": "N/A"
+    },
+    {
+      "Title": "A Portrait of Harry",
+      "Year": "2000",
+      "imdbID": "tt0996493",
+      "Type": "movie",
+      "Poster": "N/A"
+    }
+  ],
+  "totalResults": "12",
+  "Response": "True"
+}
