@@ -1,12 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe CreateMovieWorker, type: :worker do
-  subject { worker.perform }
+  subject { worker.perform(title) }
 
   let(:worker) { described_class.new }
+  let(:api) { AddMovieFromApiService.new }
+  let(:title) {"Troy"}
 
-  it 'should add Movie to database' do
-    expect {subject}.to change{Movie.count}.from(0).to(1)
+  before { allow(AddMovieFromApiService).to receive(:new).and_return(api) }
+
+  it 'should call api with title' do
+    expect(api).to receive(:add_movie_by_title_and_year).with(title)
+    subject
   end
 
 end

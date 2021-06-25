@@ -18,5 +18,7 @@ module Smartflix
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    # based on https://www.gojek.io/blog/sidekiq-in-rails-native-worker-activejob-whos-the-winner
+    # config.active_job.queue_adapter = :sidekiq
   end
 end

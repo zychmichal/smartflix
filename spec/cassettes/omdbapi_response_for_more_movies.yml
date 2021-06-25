@@ -1,0 +1,731 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&s=Harry
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:00:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 07:56:35 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 06:56:35 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '254'
+      Cf-Request-Id:
+      - 0ad41ea06f0000f29003308000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339a13edeff290-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Search":[{"Title":"Harry Potter and the Deathly Hallows: Part 2","Year":"2011","imdbID":"tt1201607","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg"},{"Title":"Harry
+        Potter and the Sorcerer''s Stone","Year":"2001","imdbID":"tt0241527","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg"},{"Title":"Harry
+        Potter and the Chamber of Secrets","Year":"2002","imdbID":"tt0295297","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMTcxODgwMDkxNV5BMl5BanBnXkFtZTYwMDk2MDg3._V1_SX300.jpg"},{"Title":"Harry
+        Potter and the Prisoner of Azkaban","Year":"2004","imdbID":"tt0304141","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMTY4NTIwODg0N15BMl5BanBnXkFtZTcwOTc0MjEzMw@@._V1_SX300.jpg"},{"Title":"Harry
+        Potter and the Goblet of Fire","Year":"2005","imdbID":"tt0330373","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMTI1NDMyMjExOF5BMl5BanBnXkFtZTcwOTc4MjQzMQ@@._V1_SX300.jpg"},{"Title":"Harry
+        Potter and the Order of the Phoenix","Year":"2007","imdbID":"tt0373889","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMTM0NTczMTUzOV5BMl5BanBnXkFtZTYwMzIxNTg3._V1_SX300.jpg"},{"Title":"Harry
+        Potter and the Deathly Hallows: Part 1","Year":"2010","imdbID":"tt0926084","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMTQ2OTE1Mjk0N15BMl5BanBnXkFtZTcwODE3MDAwNA@@._V1_SX300.jpg"},{"Title":"Harry
+        Potter and the Half-Blood Prince","Year":"2009","imdbID":"tt0417741","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BNzU3NDg4NTAyNV5BMl5BanBnXkFtZTcwOTg2ODg1Mg@@._V1_SX300.jpg"},{"Title":"When
+        Harry Met Sally...","Year":"1989","imdbID":"tt0098635","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMjE0ODEwNjM2NF5BMl5BanBnXkFtZTcwMjU2Mzg3NA@@._V1_SX300.jpg"},{"Title":"Dirty
+        Harry","Year":"1971","imdbID":"tt0066999","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMzdhMTM2YTItOWU2YS00MTM0LTgyNDYtMDM1OWM3NzkzNTM2XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"}],"totalResults":"750","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:00:49 GMT
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Harry%20Potter%20and%20the%20Deathly%20Hallows:%20Part%202&y=2011
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:00:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 07:48:32 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 06:48:32 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '738'
+      Cf-Request-Id:
+      - 0ad41ea0bf000050190b101000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339a146adf5019-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Harry Potter and the Deathly Hallows: Part 2","Year":"2011","Rated":"PG-13","Released":"15
+        Jul 2011","Runtime":"130 min","Genre":"Adventure, Drama, Fantasy, Mystery","Director":"David
+        Yates","Writer":"Steve Kloves (screenplay), J.K. Rowling (novel)","Actors":"Ralph
+        Fiennes, Michael Gambon, Alan Rickman, Daniel Radcliffe","Plot":"Harry, Ron,
+        and Hermione search for Voldemort''s remaining Horcruxes in their effort to
+        destroy the Dark Lord as the final battle rages on at Hogwarts.","Language":"English","Country":"UK,
+        USA","Awards":"Nominated for 3 Oscars. Another 46 wins & 91 nominations.","Poster":"https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"8.1/10"},{"Source":"Rotten Tomatoes","Value":"96%"},{"Source":"Metacritic","Value":"85/100"}],"Metascore":"85","imdbRating":"8.1","imdbVotes":"786,289","imdbID":"tt1201607","Type":"movie","DVD":"24
+        Jul 2014","BoxOffice":"$381,409,310","Production":"Warner Bros., Moving Picture
+        Company, Heyday Films","Website":"N/A","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:00:49 GMT
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Harry%20Potter%20and%20the%20Sorcerer%27s%20Stone&y=2001
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:00:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 07:48:34 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 06:48:34 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '735'
+      Cf-Request-Id:
+      - 0ad41ea126000050312fbed000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339a150e185031-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Harry Potter and the Sorcerer''s Stone","Year":"2001","Rated":"PG","Released":"16
+        Nov 2001","Runtime":"152 min","Genre":"Adventure, Family, Fantasy","Director":"Chris
+        Columbus","Writer":"J.K. Rowling (novel), Steve Kloves (screenplay)","Actors":"Richard
+        Harris, Maggie Smith, Robbie Coltrane, Saunders Triplets","Plot":"An orphaned
+        boy enrolls in a school of wizardry, where he learns the truth about himself,
+        his family and the terrible evil that haunts the magical world.","Language":"English","Country":"UK,
+        USA","Awards":"Nominated for 3 Oscars. Another 17 wins & 65 nominations.","Poster":"https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"7.6/10"},{"Source":"Rotten Tomatoes","Value":"81%"},{"Source":"Metacritic","Value":"64/100"}],"Metascore":"64","imdbRating":"7.6","imdbVotes":"679,730","imdbID":"tt0241527","Type":"movie","DVD":"16
+        Dec 2012","BoxOffice":"$318,087,620","Production":"1492 Pictures, Heyday Films,
+        Warner Brothers","Website":"N/A","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:00:50 GMT
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Harry%20Potter%20and%20the%20Chamber%20of%20Secrets&y=2002
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:00:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 07:48:35 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 06:48:35 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '735'
+      Cf-Request-Id:
+      - 0ad41ea18e00000020e4a14000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339a15a98e0020-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Harry Potter and the Chamber of Secrets","Year":"2002","Rated":"PG","Released":"15
+        Nov 2002","Runtime":"161 min","Genre":"Adventure, Family, Fantasy","Director":"Chris
+        Columbus","Writer":"J.K. Rowling, Steve Kloves","Actors":"Daniel Radcliffe,
+        Rupert Grint, Emma Watson","Plot":"An ancient prophecy seems to be coming
+        true when a mysterious presence begins stalking the corridors of a school
+        of magic and leaving its victims paralyzed.","Language":"English","Country":"United
+        Kingdom, United States","Awards":"13 wins & 46 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BMTcxODgwMDkxNV5BMl5BanBnXkFtZTYwMDk2MDg3._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"7.4/10"},{"Source":"Rotten Tomatoes","Value":"82%"},{"Source":"Metacritic","Value":"63/100"}],"Metascore":"63","imdbRating":"7.4","imdbVotes":"568,738","imdbID":"tt0295297","Type":"movie","DVD":"15
+        Jan 2008","BoxOffice":"$262,450,136","Production":"1492 Pictures, Heyday Films","Website":"N/A","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:00:50 GMT
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Harry%20Potter%20and%20the%20Prisoner%20of%20Azkaban&y=2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:00:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 07:48:36 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 06:48:36 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '734'
+      Cf-Request-Id:
+      - 0ad41ea1dc0000f2d414313000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339a16291cf2d4-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJUaXRsZSI6IkhhcnJ5IFBvdHRlciBhbmQgdGhlIFByaXNvbmVyIG9mIEF6a2FiYW4iLCJZZWFyIjoiMjAwNCIsIlJhdGVkIjoiUEciLCJSZWxlYXNlZCI6IjA0IEp1biAyMDA0IiwiUnVudGltZSI6IjE0MiBtaW4iLCJHZW5yZSI6IkFkdmVudHVyZSwgRmFtaWx5LCBGYW50YXN5LCBNeXN0ZXJ5IiwiRGlyZWN0b3IiOiJBbGZvbnNvIEN1YXLDs24iLCJXcml0ZXIiOiJKLksuIFJvd2xpbmcgKG5vdmVsKSwgU3RldmUgS2xvdmVzIChzY3JlZW5wbGF5KSIsIkFjdG9ycyI6IkRhbmllbCBSYWRjbGlmZmUsIFJpY2hhcmQgR3JpZmZpdGhzLCBQYW0gRmVycmlzLCBGaW9uYSBTaGF3IiwiUGxvdCI6IkhhcnJ5IFBvdHRlciwgUm9uIGFuZCBIZXJtaW9uZSByZXR1cm4gdG8gSG9nd2FydHMgU2Nob29sIG9mIFdpdGNoY3JhZnQgYW5kIFdpemFyZHJ5IGZvciB0aGVpciB0aGlyZCB5ZWFyIG9mIHN0dWR5LCB3aGVyZSB0aGV5IGRlbHZlIGludG8gdGhlIG15c3Rlcnkgc3Vycm91bmRpbmcgYW4gZXNjYXBlZCBwcmlzb25lciB3aG8gcG9zZXMgYSBkYW5nZXJvdXMgdGhyZWF0IHRvIHRoZSB5b3VuZyB3aXphcmQuIiwiTGFuZ3VhZ2UiOiJFbmdsaXNoIiwiQ291bnRyeSI6IlVLLCBVU0EiLCJBd2FyZHMiOiJOb21pbmF0ZWQgZm9yIDIgT3NjYXJzLiBBbm90aGVyIDE3IHdpbnMgJiA1MSBub21pbmF0aW9ucy4iLCJQb3N0ZXIiOiJodHRwczovL20ubWVkaWEtYW1hem9uLmNvbS9pbWFnZXMvTS9NVjVCTVRZNE5USXdPRGcwTjE1Qk1sNUJhbkJuWGtGdFpUY3dPVGMwTWpFek13QEAuX1YxX1NYMzAwLmpwZyIsIlJhdGluZ3MiOlt7IlNvdXJjZSI6IkludGVybmV0IE1vdmllIERhdGFiYXNlIiwiVmFsdWUiOiI3LjkvMTAifSx7IlNvdXJjZSI6IlJvdHRlbiBUb21hdG9lcyIsIlZhbHVlIjoiOTAlIn0seyJTb3VyY2UiOiJNZXRhY3JpdGljIiwiVmFsdWUiOiI4Mi8xMDAifV0sIk1ldGFzY29yZSI6IjgyIiwiaW1kYlJhdGluZyI6IjcuOSIsImltZGJWb3RlcyI6IjU2NywwNDgiLCJpbWRiSUQiOiJ0dDAzMDQxNDEiLCJUeXBlIjoibW92aWUiLCJEVkQiOiIwMSBNYXIgMjAxMyIsIkJveE9mZmljZSI6IiQyNDksOTc1LDk5NiIsIlByb2R1Y3Rpb24iOiIxNDkyIFBpY3R1cmVzLCBIZXlkYXkgRmlsbXMsIFdhcm5lciBCcm90aGVycyIsIldlYnNpdGUiOiJOL0EiLCJSZXNwb25zZSI6IlRydWUifQ==
+  recorded_at: Tue, 22 Jun 2021 07:00:50 GMT
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Harry%20Potter%20and%20the%20Goblet%20of%20Fire&y=2005
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:00:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 07:48:37 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 06:48:37 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '733'
+      Cf-Request-Id:
+      - 0ad41ea24b0000162a9f952000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339a16d8d3162a-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Harry Potter and the Goblet of Fire","Year":"2005","Rated":"PG-13","Released":"18
+        Nov 2005","Runtime":"157 min","Genre":"Adventure, Family, Fantasy, Mystery","Director":"Mike
+        Newell","Writer":"Steve Kloves (screenplay), J.K. Rowling (novel)","Actors":"Eric
+        Sykes, Timothy Spall, David Tennant, Daniel Radcliffe","Plot":"Harry Potter
+        finds himself competing in a hazardous tournament between rival schools of
+        magic, but he is distracted by recurring nightmares.","Language":"English,
+        French","Country":"UK, USA","Awards":"Nominated for 1 Oscar. Another 13 wins
+        & 43 nominations.","Poster":"https://m.media-amazon.com/images/M/MV5BMTI1NDMyMjExOF5BMl5BanBnXkFtZTcwOTc4MjQzMQ@@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"7.7/10"},{"Source":"Rotten Tomatoes","Value":"88%"},{"Source":"Metacritic","Value":"81/100"}],"Metascore":"81","imdbRating":"7.7","imdbVotes":"562,719","imdbID":"tt0330373","Type":"movie","DVD":"01
+        Jan 2008","BoxOffice":"$290,417,905","Production":"1492 Pictures, Warner Bros.,
+        Heyday Films","Website":"N/A","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:00:50 GMT
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Harry%20Potter%20and%20the%20Order%20of%20the%20Phoenix&y=2007
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:00:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 07:48:37 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 06:48:37 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '733'
+      Cf-Request-Id:
+      - 0ad41ea29f0000502b4e1ff000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339a176bc9502b-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Harry Potter and the Order of the Phoenix","Year":"2007","Rated":"PG-13","Released":"11
+        Jul 2007","Runtime":"138 min","Genre":"Action, Adventure, Family, Fantasy,
+        Mystery","Director":"David Yates","Writer":"Michael Goldenberg (screenplay),
+        J.K. Rowling (novel)","Actors":"Daniel Radcliffe, Harry Melling, Jason Boyd,
+        Richard Macklin","Plot":"With their warning about Lord Voldemort''s return
+        scoffed at, Harry and Dumbledore are targeted by the Wizard authorities as
+        an authoritarian bureaucrat slowly seizes power at Hogwarts.","Language":"English","Country":"UK,
+        USA","Awards":"Nominated for 2 BAFTA Film Awards. Another 16 wins & 45 nominations.","Poster":"https://m.media-amazon.com/images/M/MV5BMTM0NTczMTUzOV5BMl5BanBnXkFtZTYwMzIxNTg3._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"7.5/10"},{"Source":"Rotten Tomatoes","Value":"77%"},{"Source":"Metacritic","Value":"71/100"}],"Metascore":"71","imdbRating":"7.5","imdbVotes":"522,195","imdbID":"tt0373889","Type":"movie","DVD":"15
+        Dec 2009","BoxOffice":"$292,353,413","Production":"Warner Bros., Heyday Films","Website":"N/A","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:00:50 GMT
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Harry%20Potter%20and%20the%20Deathly%20Hallows:%20Part%201&y=2010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:00:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 07:48:38 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 06:48:38 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '732'
+      Cf-Request-Id:
+      - 0ad41ea2f10000165b7d2ef000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339a17ea5f165b-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Harry Potter and the Deathly Hallows: Part 1","Year":"2010","Rated":"PG-13","Released":"19
+        Nov 2010","Runtime":"146 min","Genre":"Adventure, Family, Fantasy, Mystery","Director":"David
+        Yates","Writer":"Steve Kloves (screenplay), J.K. Rowling (novel)","Actors":"Bill
+        Nighy, Emma Watson, Richard Griffiths, Harry Melling","Plot":"As Harry, Ron,
+        and Hermione race against time and evil to destroy the Horcruxes, they uncover
+        the existence of the three most powerful objects in the wizarding world: the
+        Deathly Hallows.","Language":"English","Country":"UK","Awards":"Nominated
+        for 2 Oscars. Another 15 wins & 53 nominations.","Poster":"https://m.media-amazon.com/images/M/MV5BMTQ2OTE1Mjk0N15BMl5BanBnXkFtZTcwODE3MDAwNA@@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"7.7/10"},{"Source":"Rotten Tomatoes","Value":"77%"},{"Source":"Metacritic","Value":"65/100"}],"Metascore":"65","imdbRating":"7.7","imdbVotes":"492,260","imdbID":"tt0926084","Type":"movie","DVD":"24
+        Jul 2014","BoxOffice":"$296,347,721","Production":"Heyday Films, Warner Bros.","Website":"N/A","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:00:50 GMT
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Harry%20Potter%20and%20the%20Half-Blood%20Prince&y=2009
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:00:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 07:48:39 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 06:48:39 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '731'
+      Cf-Request-Id:
+      - 0ad41ea3400000cc836104d000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339a186df1cc83-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Harry Potter and the Half-Blood Prince","Year":"2009","Rated":"PG","Released":"15
+        Jul 2009","Runtime":"153 min","Genre":"Action, Adventure, Family, Fantasy,
+        Mystery","Director":"David Yates","Writer":"Steve Kloves (screenplay), J.K.
+        Rowling (novel)","Actors":"Daniel Radcliffe, Michael Gambon, Dave Legeno,
+        Elarica Johnson","Plot":"As Harry Potter begins his sixth year at Hogwarts,
+        he discovers an old book marked as \"the property of the Half-Blood Prince\"
+        and begins to learn more about Lord Voldemort''s dark past.","Language":"English","Country":"UK","Awards":"Nominated
+        for 1 Oscar. Another 9 wins & 38 nominations.","Poster":"https://m.media-amazon.com/images/M/MV5BNzU3NDg4NTAyNV5BMl5BanBnXkFtZTcwOTg2ODg1Mg@@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"7.6/10"},{"Source":"Rotten Tomatoes","Value":"84%"},{"Source":"Metacritic","Value":"78/100"}],"Metascore":"78","imdbRating":"7.6","imdbVotes":"486,826","imdbID":"tt0417741","Type":"movie","DVD":"01
+        Jun 2011","BoxOffice":"$302,305,431","Production":"Heyday Films, Warner Bros.","Website":"N/A","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:00:50 GMT
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=When%20Harry%20Met%20Sally...&y=1989
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:00:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 07:56:36 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 06:56:36 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '254'
+      Cf-Request-Id:
+      - 0ad41ea3910000cc779b344000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339a18e927cc77-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"When Harry Met Sally...","Year":"1989","Rated":"R","Released":"21
+        Jul 1989","Runtime":"95 min","Genre":"Comedy, Drama, Romance","Director":"Rob
+        Reiner","Writer":"Nora Ephron","Actors":"Billy Crystal, Meg Ryan, Carrie Fisher","Plot":"Harry
+        and Sally have known each other for years, and are very good friends, but
+        they fear sex would ruin the friendship.","Language":"English","Country":"United
+        States","Awards":"Nominated for 1 Oscar. 4 wins & 17 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BMjE0ODEwNjM2NF5BMl5BanBnXkFtZTcwMjU2Mzg3NA@@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"7.6/10"},{"Source":"Rotten Tomatoes","Value":"91%"},{"Source":"Metacritic","Value":"76/100"}],"Metascore":"76","imdbRating":"7.6","imdbVotes":"200,154","imdbID":"tt0098635","Type":"movie","DVD":"28
+        Nov 2016","BoxOffice":"$93,075,866","Production":"Castle Rock Entertainment","Website":"N/A","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:00:50 GMT
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Dirty%20Harry&y=1971
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:00:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 07:56:37 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 06:56:37 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '253'
+      Cf-Request-Id:
+      - 0ad41ea3f0000050376f014000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339a1978b55037-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Dirty Harry","Year":"1971","Rated":"R","Released":"23 Dec
+        1971","Runtime":"102 min","Genre":"Action, Crime, Thriller","Director":"Don
+        Siegel, Clint Eastwood","Writer":"Harry Julian Fink, Rita M. Fink, Dean Riesner","Actors":"Clint
+        Eastwood, Andrew Robinson, Harry Guardino","Plot":"When a madman calling himself
+        &quot;the Scorpio Killer&quot; menaces the city, tough-as-nails San Francisco
+        Police Inspector &quot;Dirty&quot; Harry Callahan is assigned to track down
+        and ferret out the crazed psychopath.","Language":"English","Country":"United
+        States","Awards":"2 wins & 4 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BMzdhMTM2YTItOWU2YS00MTM0LTgyNDYtMDM1OWM3NzkzNTM2XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"7.7/10"},{"Source":"Rotten Tomatoes","Value":"89%"},{"Source":"Metacritic","Value":"90/100"}],"Metascore":"90","imdbRating":"7.7","imdbVotes":"145,906","imdbID":"tt0066999","Type":"movie","DVD":"15
+        Aug 2008","BoxOffice":"$35,976,000","Production":"Warner Brothers, Malpaso
+        Company","Website":"N/A","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:00:50 GMT
+recorded_with: VCR 6.0.0

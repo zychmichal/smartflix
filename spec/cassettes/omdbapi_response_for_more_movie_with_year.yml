@@ -1,0 +1,244 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&s=Harry%20Potter&y=2015
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:02:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 08:02:30 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 07:02:30 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 0ad42025f400001636133ab000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339c831c611636-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Search":[{"Title":"R-Rated Harry Potter","Year":"2015","imdbID":"tt5324298","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BZDg1M2IzODYtNDZlYS00MGMxLTlmMzAtOWVhZWU3YmFhMDM2XkEyXkFqcGdeQXVyMjMzMzc0MjM@._V1_SX300.jpg"},{"Title":"Hufflepuff:
+        A Harry Potter Rap Parody","Year":"2015","imdbID":"tt5369766","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMjI4MzUxOTUzOV5BMl5BanBnXkFtZTgwNzIwNTQ4NzE@._V1_SX300.jpg"},{"Title":"Dark
+        Lord Funk: Harry Potter Parody of Uptown Funk","Year":"2015","imdbID":"tt6898566","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BM2Y4ZTg1NTgtZjkzYS00MTliLWJkYmQtYjM5ZjVhYWJkZTIzXkEyXkFqcGdeQXVyNzYzMDYzNzY@._V1_SX300.jpg"}],"totalResults":"3","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:02:30 GMT
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=R-Rated%20Harry%20Potter&y=2015
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:02:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 08:02:30 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 07:02:30 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 0ad42028c1000000630f29e000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339c8798e00063-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"R-Rated Harry Potter","Year":"2015","Rated":"N/A","Released":"11
+        Jun 2015","Runtime":"5 min","Genre":"Animation, Short, Comedy, Fantasy, Horror","Director":"Jared
+        Neumark","Writer":"Benny Fine (created by), Rafi Fine (created by), Alex Wechsler,
+        Benny Fine","Actors":"Benny Fine, Rafi Fine, Jeffery Patton, Amanda Rae Troisi","Plot":"An
+        inappropriate spoof of Harry Potter and the Philosopher''s Stone.","Language":"English","Country":"USA","Awards":"N/A","Poster":"https://m.media-amazon.com/images/M/MV5BZDg1M2IzODYtNDZlYS00MGMxLTlmMzAtOWVhZWU3YmFhMDM2XkEyXkFqcGdeQXVyMjMzMzc0MjM@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"3.3/10"}],"Metascore":"N/A","imdbRating":"3.3","imdbVotes":"41","imdbID":"tt5324298","Type":"movie","DVD":"N/A","BoxOffice":"N/A","Production":"N/A","Website":"N/A","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:02:31 GMT
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Hufflepuff:%20A%20Harry%20Potter%20Rap%20Parody&y=2015
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:02:32 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 08:02:31 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 07:02:31 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 0ad4202c6d0000cc779d8dd000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339c8d7e5bcc77-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Hufflepuff: A Harry Potter Rap Parody","Year":"2015","Rated":"N/A","Released":"10
+        Dec 2015","Runtime":"N/A","Genre":"Short, Comedy, Fantasy, Music","Director":"Mary
+        Rachel Gardner, Michelle Siouty, Sean Siouty","Writer":"Tre Hall, Michelle
+        Siouty","Actors":"Lily Becerra, Zachary di Lello, Annelisha Dixon, Mary Rachel
+        Gardner","Plot":"J.K. Rowling said it herself when she deemed 2015 \"The Dawn
+        of the Age of Hufflepuff,\" so Huffle, puff, pass, and enjoy.","Language":"English","Country":"USA","Awards":"N/A","Poster":"https://m.media-amazon.com/images/M/MV5BMjI4MzUxOTUzOV5BMl5BanBnXkFtZTgwNzIwNTQ4NzE@._V1_SX300.jpg","Ratings":[],"Metascore":"N/A","imdbRating":"N/A","imdbVotes":"N/A","imdbID":"tt5369766","Type":"movie","DVD":"N/A","BoxOffice":"N/A","Production":"N/A","Website":"N/A","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:02:32 GMT
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Dark%20Lord%20Funk:%20Harry%20Potter%20Parody%20of%20Uptown%20Funk&y=2015
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:02:32 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 08:02:32 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 07:02:32 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 0ad42030110000500cc836d000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339c934e8f500c-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Dark Lord Funk: Harry Potter Parody of Uptown Funk","Year":"2015","Rated":"N/A","Released":"23
+        Mar 2015","Runtime":"N/A","Genre":"Short","Director":"Keith Allen","Writer":"Keith
+        Allen, Elijah Thomas","Actors":"Keith Allen, Elijah Thomas","Plot":"Elijah
+        Thomas plays Lord Voldemort in this amazing Harry Potter parody of \"Uptown
+        Funk\" by Mark Ronson feat. Bruno Mars. - Directed by Keith Allen. Music Production
+        by Marcus Joseph aka Encore.","Language":"English","Country":"USA","Awards":"N/A","Poster":"https://m.media-amazon.com/images/M/MV5BM2Y4ZTg1NTgtZjkzYS00MTliLWJkYmQtYjM5ZjVhYWJkZTIzXkEyXkFqcGdeQXVyNzYzMDYzNzY@._V1_SX300.jpg","Ratings":[],"Metascore":"N/A","imdbRating":"N/A","imdbVotes":"N/A","imdbID":"tt6898566","Type":"movie","DVD":"N/A","BoxOffice":"N/A","Production":"N/A","Website":"N/A","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:02:32 GMT
+recorded_with: VCR 6.0.0

@@ -35,6 +35,8 @@ gem 'sidekiq-scheduler'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'database_cleaner', '~> 2.0', '>= 2.0.1'
+  gem 'factory_bot', '~> 6.2'
   gem 'faker'
 end
 
@@ -57,6 +59,7 @@ group :test do
   gem 'webdrivers'
   gem 'rspec-rails'
   gem 'webmock'
+  gem 'vcr', '~> 6.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

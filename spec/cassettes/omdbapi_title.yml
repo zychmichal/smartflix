@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Harry%20Potter
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:00:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 07:41:00 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 06:41:00 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '1189'
+      Cf-Request-Id:
+      - 0ad41e9f3e0000001609ad6000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339a11ff650016-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Harry Potter and the Deathly Hallows: Part 2","Year":"2011","Rated":"PG-13","Released":"15
+        Jul 2011","Runtime":"130 min","Genre":"Adventure, Drama, Fantasy, Mystery","Director":"David
+        Yates","Writer":"Steve Kloves (screenplay), J.K. Rowling (novel)","Actors":"Ralph
+        Fiennes, Michael Gambon, Alan Rickman, Daniel Radcliffe","Plot":"Harry, Ron,
+        and Hermione search for Voldemort''s remaining Horcruxes in their effort to
+        destroy the Dark Lord as the final battle rages on at Hogwarts.","Language":"English","Country":"UK,
+        USA","Awards":"Nominated for 3 Oscars. Another 46 wins & 91 nominations.","Poster":"https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"8.1/10"},{"Source":"Rotten Tomatoes","Value":"96%"},{"Source":"Metacritic","Value":"85/100"}],"Metascore":"85","imdbRating":"8.1","imdbVotes":"786,289","imdbID":"tt1201607","Type":"movie","DVD":"24
+        Jul 2014","BoxOffice":"$381,409,310","Production":"Warner Bros., Moving Picture
+        Company, Heyday Films","Website":"N/A","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:00:49 GMT
+recorded_with: VCR 6.0.0

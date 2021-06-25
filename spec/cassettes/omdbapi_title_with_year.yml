@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Harry%20Potter&y=2010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.omdbapi.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jun 2021 07:00:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 22 Jun 2021 07:41:02 GMT
+      Last-Modified:
+      - Tue, 22 Jun 2021 06:41:02 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '1187'
+      Cf-Request-Id:
+      - 0ad41ea00d0000165b4da45000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 66339a134bb9165b-WAW
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Harry Potter and the Deathly Hallows: Part 1","Year":"2010","Rated":"PG-13","Released":"19
+        Nov 2010","Runtime":"146 min","Genre":"Adventure, Family, Fantasy, Mystery","Director":"David
+        Yates","Writer":"Steve Kloves (screenplay), J.K. Rowling (novel)","Actors":"Bill
+        Nighy, Emma Watson, Richard Griffiths, Harry Melling","Plot":"As Harry, Ron,
+        and Hermione race against time and evil to destroy the Horcruxes, they uncover
+        the existence of the three most powerful objects in the wizarding world: the
+        Deathly Hallows.","Language":"English","Country":"UK","Awards":"Nominated
+        for 2 Oscars. Another 15 wins & 53 nominations.","Poster":"https://m.media-amazon.com/images/M/MV5BMTQ2OTE1Mjk0N15BMl5BanBnXkFtZTcwODE3MDAwNA@@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"7.7/10"},{"Source":"Rotten Tomatoes","Value":"77%"},{"Source":"Metacritic","Value":"65/100"}],"Metascore":"65","imdbRating":"7.7","imdbVotes":"492,260","imdbID":"tt0926084","Type":"movie","DVD":"24
+        Jul 2014","BoxOffice":"$296,347,721","Production":"Heyday Films, Warner Bros.","Website":"N/A","Response":"True"}'
+  recorded_at: Tue, 22 Jun 2021 07:00:49 GMT
+recorded_with: VCR 6.0.0
