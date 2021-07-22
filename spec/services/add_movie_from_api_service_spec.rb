@@ -4,6 +4,7 @@ RSpec.describe AddMovieFromApiService do
   subject { described_class.new }
 
   let(:title) {"Harry Potter"}
+  before { Rails.application.credentials.omdbapi[:key] = "apikey" }
 
   context "add single movie" do
     context "add single movie from OMDB API without year" do

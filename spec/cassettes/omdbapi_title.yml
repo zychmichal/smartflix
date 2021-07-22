@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Harry%20Potter
+    uri: https://www.omdbapi.com/?apikey=apikey&t=Harry%20Potter
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 22 Jun 2021 07:00:49 GMT
+      - Mon, 28 Jun 2021 06:43:48 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Tue, 22 Jun 2021 07:41:00 GMT
+      - Mon, 28 Jun 2021 07:43:48 GMT
       Last-Modified:
-      - Tue, 22 Jun 2021 06:41:00 GMT
+      - Mon, 28 Jun 2021 06:43:48 GMT
       Vary:
       - "*, Accept-Encoding"
       X-Aspnet-Version:
@@ -43,17 +43,13 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Cf-Cache-Status:
-      - HIT
-      Age:
-      - '1189'
+      - MISS
       Cf-Request-Id:
-      - 0ad41e9f3e0000001609ad6000000001
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      - 0af2f530580000503db88e2000000001
       Server:
       - cloudflare
       Cf-Ray:
-      - 66339a11ff650016-WAW
+      - 6664f1608cf1503d-WAW
     body:
       encoding: ASCII-8BIT
       string: '{"Title":"Harry Potter and the Deathly Hallows: Part 2","Year":"2011","Rated":"PG-13","Released":"15
@@ -66,5 +62,5 @@ http_interactions:
         Movie Database","Value":"8.1/10"},{"Source":"Rotten Tomatoes","Value":"96%"},{"Source":"Metacritic","Value":"85/100"}],"Metascore":"85","imdbRating":"8.1","imdbVotes":"786,289","imdbID":"tt1201607","Type":"movie","DVD":"24
         Jul 2014","BoxOffice":"$381,409,310","Production":"Warner Bros., Moving Picture
         Company, Heyday Films","Website":"N/A","Response":"True"}'
-  recorded_at: Tue, 22 Jun 2021 07:00:49 GMT
+  recorded_at: Mon, 28 Jun 2021 06:43:48 GMT
 recorded_with: VCR 6.0.0

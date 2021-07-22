@@ -4,8 +4,8 @@ require 'json'
 
 class AddMovieFromApiService
 
-  OMDBAPI_KEY =  Rails.application.credentials.omdbapi[:key]
-  BASE_URI = 'http://www.omdbapi.com/?'
+  #OMDBAPI_KEY =  Rails.application.credentials.omdbapi[:key]
+  BASE_URI = 'https://www.omdbapi.com/?'
   ERROR_MESSAGE = "Movie not found!"
 
   def add_movie_by_title_and_year(title, year = nil)
@@ -30,15 +30,15 @@ class AddMovieFromApiService
   end
 
   def build_uri_by_search(title, year = nil)
-    year.nil? ? build_uri(apikey: OMDBAPI_KEY, s: title) : build_uri(apikey: OMDBAPI_KEY, s: title, y: year)
+    year.nil? ? build_uri(apikey: Rails.application.credentials.omdbapi[:key], s: title) : build_uri(apikey: Rails.application.credentials.omdbapi[:key], s: title, y: year)
   end
 
   def build_uri_by_title(title, year = nil)
-    year.nil? ? build_uri(apikey: OMDBAPI_KEY, t: title) : build_uri(apikey: OMDBAPI_KEY, t: title, y: year)
+    year.nil? ? build_uri(apikey: Rails.application.credentials.omdbapi[:key], t: title) : build_uri(apikey: Rails.application.credentials.omdbapi[:key], t: title, y: year)
   end
 
   def build_uri(params)
-    uri = URI("https://www.omdbapi.com/?")
+    uri = URI(BASE_URI)
     uri.query = URI.encode_www_form(params)
     uri
   end

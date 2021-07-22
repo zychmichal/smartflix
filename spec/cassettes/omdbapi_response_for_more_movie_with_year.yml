@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.omdbapi.com/?apikey=796e0d78&s=Harry%20Potter&y=2015
+    uri: https://www.omdbapi.com/?apikey=apikey&s=Harry%20Potter&y=2015
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 22 Jun 2021 07:02:30 GMT
+      - Fri, 25 Jun 2021 12:16:21 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Tue, 22 Jun 2021 08:02:30 GMT
+      - Fri, 25 Jun 2021 13:16:21 GMT
       Last-Modified:
-      - Tue, 22 Jun 2021 07:02:30 GMT
+      - Fri, 25 Jun 2021 12:16:21 GMT
       Vary:
       - "*, Accept-Encoding"
       X-Aspnet-Version:
@@ -45,22 +45,22 @@ http_interactions:
       Cf-Cache-Status:
       - MISS
       Cf-Request-Id:
-      - 0ad42025f400001636133ab000000001
+      - 0ae4b290da0000f2ac292fe000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 66339c831c611636-WAW
+      - 664e20615f11f2ac-WAW
     body:
       encoding: ASCII-8BIT
       string: '{"Search":[{"Title":"R-Rated Harry Potter","Year":"2015","imdbID":"tt5324298","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BZDg1M2IzODYtNDZlYS00MGMxLTlmMzAtOWVhZWU3YmFhMDM2XkEyXkFqcGdeQXVyMjMzMzc0MjM@._V1_SX300.jpg"},{"Title":"Hufflepuff:
         A Harry Potter Rap Parody","Year":"2015","imdbID":"tt5369766","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMjI4MzUxOTUzOV5BMl5BanBnXkFtZTgwNzIwNTQ4NzE@._V1_SX300.jpg"},{"Title":"Dark
         Lord Funk: Harry Potter Parody of Uptown Funk","Year":"2015","imdbID":"tt6898566","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BM2Y4ZTg1NTgtZjkzYS00MTliLWJkYmQtYjM5ZjVhYWJkZTIzXkEyXkFqcGdeQXVyNzYzMDYzNzY@._V1_SX300.jpg"}],"totalResults":"3","Response":"True"}'
-  recorded_at: Tue, 22 Jun 2021 07:02:30 GMT
+  recorded_at: Fri, 25 Jun 2021 12:16:21 GMT
 - request:
     method: get
-    uri: https://www.omdbapi.com/?apikey=796e0d78&t=R-Rated%20Harry%20Potter&y=2015
+    uri: https://www.omdbapi.com/?apikey=apikey&t=R-Rated%20Harry%20Potter&y=2015
     body:
       encoding: US-ASCII
       string: ''
@@ -79,7 +79,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 22 Jun 2021 07:02:31 GMT
+      - Fri, 25 Jun 2021 12:16:22 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -89,9 +89,9 @@ http_interactions:
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Tue, 22 Jun 2021 08:02:30 GMT
+      - Fri, 25 Jun 2021 13:16:21 GMT
       Last-Modified:
-      - Tue, 22 Jun 2021 07:02:30 GMT
+      - Fri, 25 Jun 2021 12:16:21 GMT
       Vary:
       - "*, Accept-Encoding"
       X-Aspnet-Version:
@@ -103,13 +103,13 @@ http_interactions:
       Cf-Cache-Status:
       - MISS
       Cf-Request-Id:
-      - 0ad42028c1000000630f29e000000001
+      - 0ae4b293a80000003042a0f000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 66339c8798e00063-WAW
+      - 664e2065dd6f0030-WAW
     body:
       encoding: ASCII-8BIT
       string: '{"Title":"R-Rated Harry Potter","Year":"2015","Rated":"N/A","Released":"11
@@ -118,10 +118,10 @@ http_interactions:
         Benny Fine","Actors":"Benny Fine, Rafi Fine, Jeffery Patton, Amanda Rae Troisi","Plot":"An
         inappropriate spoof of Harry Potter and the Philosopher''s Stone.","Language":"English","Country":"USA","Awards":"N/A","Poster":"https://m.media-amazon.com/images/M/MV5BZDg1M2IzODYtNDZlYS00MGMxLTlmMzAtOWVhZWU3YmFhMDM2XkEyXkFqcGdeQXVyMjMzMzc0MjM@._V1_SX300.jpg","Ratings":[{"Source":"Internet
         Movie Database","Value":"3.3/10"}],"Metascore":"N/A","imdbRating":"3.3","imdbVotes":"41","imdbID":"tt5324298","Type":"movie","DVD":"N/A","BoxOffice":"N/A","Production":"N/A","Website":"N/A","Response":"True"}'
-  recorded_at: Tue, 22 Jun 2021 07:02:31 GMT
+  recorded_at: Fri, 25 Jun 2021 12:16:22 GMT
 - request:
     method: get
-    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Hufflepuff:%20A%20Harry%20Potter%20Rap%20Parody&y=2015
+    uri: https://www.omdbapi.com/?apikey=apikey&t=Hufflepuff:%20A%20Harry%20Potter%20Rap%20Parody&y=2015
     body:
       encoding: US-ASCII
       string: ''
@@ -140,7 +140,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 22 Jun 2021 07:02:32 GMT
+      - Fri, 25 Jun 2021 12:16:23 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -150,9 +150,9 @@ http_interactions:
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Tue, 22 Jun 2021 08:02:31 GMT
+      - Fri, 25 Jun 2021 13:16:22 GMT
       Last-Modified:
-      - Tue, 22 Jun 2021 07:02:31 GMT
+      - Fri, 25 Jun 2021 12:16:22 GMT
       Vary:
       - "*, Accept-Encoding"
       X-Aspnet-Version:
@@ -164,13 +164,13 @@ http_interactions:
       Cf-Cache-Status:
       - MISS
       Cf-Request-Id:
-      - 0ad4202c6d0000cc779d8dd000000001
+      - 0ae4b29700000000678e876000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 66339c8d7e5bcc77-WAW
+      - 664e206b2fb40067-WAW
     body:
       encoding: ASCII-8BIT
       string: '{"Title":"Hufflepuff: A Harry Potter Rap Parody","Year":"2015","Rated":"N/A","Released":"10
@@ -179,10 +179,10 @@ http_interactions:
         Siouty","Actors":"Lily Becerra, Zachary di Lello, Annelisha Dixon, Mary Rachel
         Gardner","Plot":"J.K. Rowling said it herself when she deemed 2015 \"The Dawn
         of the Age of Hufflepuff,\" so Huffle, puff, pass, and enjoy.","Language":"English","Country":"USA","Awards":"N/A","Poster":"https://m.media-amazon.com/images/M/MV5BMjI4MzUxOTUzOV5BMl5BanBnXkFtZTgwNzIwNTQ4NzE@._V1_SX300.jpg","Ratings":[],"Metascore":"N/A","imdbRating":"N/A","imdbVotes":"N/A","imdbID":"tt5369766","Type":"movie","DVD":"N/A","BoxOffice":"N/A","Production":"N/A","Website":"N/A","Response":"True"}'
-  recorded_at: Tue, 22 Jun 2021 07:02:32 GMT
+  recorded_at: Fri, 25 Jun 2021 12:16:23 GMT
 - request:
     method: get
-    uri: https://www.omdbapi.com/?apikey=796e0d78&t=Dark%20Lord%20Funk:%20Harry%20Potter%20Parody%20of%20Uptown%20Funk&y=2015
+    uri: https://www.omdbapi.com/?apikey=apikey&t=Dark%20Lord%20Funk:%20Harry%20Potter%20Parody%20of%20Uptown%20Funk&y=2015
     body:
       encoding: US-ASCII
       string: ''
@@ -201,7 +201,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 22 Jun 2021 07:02:32 GMT
+      - Fri, 25 Jun 2021 12:16:23 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -211,9 +211,9 @@ http_interactions:
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Tue, 22 Jun 2021 08:02:32 GMT
+      - Fri, 25 Jun 2021 13:16:23 GMT
       Last-Modified:
-      - Tue, 22 Jun 2021 07:02:32 GMT
+      - Fri, 25 Jun 2021 12:16:23 GMT
       Vary:
       - "*, Accept-Encoding"
       X-Aspnet-Version:
@@ -225,13 +225,13 @@ http_interactions:
       Cf-Cache-Status:
       - MISS
       Cf-Request-Id:
-      - 0ad42030110000500cc836d000000001
+      - 0ae4b29a7c0000cc8717064000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 66339c934e8f500c-WAW
+      - 664e2070c82ecc87-WAW
     body:
       encoding: ASCII-8BIT
       string: '{"Title":"Dark Lord Funk: Harry Potter Parody of Uptown Funk","Year":"2015","Rated":"N/A","Released":"23
@@ -240,5 +240,5 @@ http_interactions:
         Thomas plays Lord Voldemort in this amazing Harry Potter parody of \"Uptown
         Funk\" by Mark Ronson feat. Bruno Mars. - Directed by Keith Allen. Music Production
         by Marcus Joseph aka Encore.","Language":"English","Country":"USA","Awards":"N/A","Poster":"https://m.media-amazon.com/images/M/MV5BM2Y4ZTg1NTgtZjkzYS00MTliLWJkYmQtYjM5ZjVhYWJkZTIzXkEyXkFqcGdeQXVyNzYzMDYzNzY@._V1_SX300.jpg","Ratings":[],"Metascore":"N/A","imdbRating":"N/A","imdbVotes":"N/A","imdbID":"tt6898566","Type":"movie","DVD":"N/A","BoxOffice":"N/A","Production":"N/A","Website":"N/A","Response":"True"}'
-  recorded_at: Tue, 22 Jun 2021 07:02:32 GMT
+  recorded_at: Fri, 25 Jun 2021 12:16:23 GMT
 recorded_with: VCR 6.0.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.omdbapi.com/?apikey=796e0d78&t=not%20existing%20movie
+    uri: https://www.omdbapi.com/?apikey=apikey&t=not%20existing%20movie
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 22 Jun 2021 07:00:49 GMT
+      - Fri, 25 Jun 2021 12:16:11 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - public, max-age=86400
       Expires:
-      - Tue, 22 Jun 2021 07:41:01 GMT
+      - Fri, 25 Jun 2021 13:16:11 GMT
       Last-Modified:
-      - Tue, 22 Jun 2021 06:41:01 GMT
+      - Fri, 25 Jun 2021 12:16:11 GMT
       Vary:
       - "*, Accept-Encoding"
       X-Aspnet-Version:
@@ -43,21 +43,19 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Cf-Cache-Status:
-      - HIT
-      Age:
-      - '1188'
+      - MISS
       Accept-Ranges:
       - bytes
       Cf-Request-Id:
-      - 0ad41e9fb500001648e4119000000001
+      - 0ae4b26a66000016245c1c6000000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 66339a12bffa1648-WAW
+      - 664e2023db471624-WAW
     body:
       encoding: UTF-8
       string: '{"Response":"False","Error":"Movie not found!"}'
-  recorded_at: Tue, 22 Jun 2021 07:00:49 GMT
+  recorded_at: Fri, 25 Jun 2021 12:16:11 GMT
 recorded_with: VCR 6.0.0

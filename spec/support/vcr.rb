@@ -5,6 +5,7 @@ VCR.configure do |c|
 
   # This line makes it so VCR and WebMock know how to talk to each other.
   c.hook_into :webmock
+  c.filter_sensitive_data('apikey') { Rails.application.credentials.omdbapi[:key] }
 
   # This line makes VCR ignore requests to localhost. This is necessary
   # even if WebMock's allow_localhost is set to true.
@@ -14,4 +15,6 @@ VCR.configure do |c|
   # to (I believe) check for updates. These requests will just show up as
   # noise in our cassettes unless we tell VCR to ignore these requests.
   c.ignore_hosts "chromedriver.storage.googleapis.com"
+  #c.default_cassette_options = { record: :once,
+  #                              match_requests_on: [:body, :method]}
 end
