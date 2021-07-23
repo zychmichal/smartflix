@@ -43,3 +43,6 @@ dump.rdb
 /config/credentials/development.key
 
 /config/credentials/test.key
+
+#Ignore coverage directory (directory using by simplecov)
+/coverage
