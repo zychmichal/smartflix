@@ -1,7 +1,7 @@
 require 'net/http'
 require 'uri'
 require 'json'
-require_relative '../adapters/movie_adapter/omdb_api/omdb'
+require_relative '../adapters/movie_adapters/omdb_api/omdb'
 
 class AddMovieFromApiService
 

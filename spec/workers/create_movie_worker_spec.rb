@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe CreateMovieWorker, type: :worker do
-  subject { worker.perform(title) }
+  subject { described_class.new.perform(title) }
 
-  let(:worker) { described_class.new }
   let(:api) { AddMovieFromApiService.new }
   let(:title) {"Troy"}
 
