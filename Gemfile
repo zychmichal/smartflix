@@ -36,7 +36,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'database_cleaner', '~> 2.0', '>= 2.0.1'
-  gem 'factory_bot', '~> 6.2' # should be here because now it's possible to generate some factories by rails by default
+  gem 'factory_bot_rails'
   gem 'faker'
   gem 'pry-rails'
 end
@@ -55,6 +55,7 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
+  gem 'database_cleaner-active_record'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
