@@ -5,7 +5,6 @@ VCR.configure do |c|
 
   # This line makes it so VCR and WebMock know how to talk to each other.
   c.hook_into :webmock
-  c.filter_sensitive_data('apikey') { Rails.application.credentials.omdbapi[:key] }
 
   # This line makes VCR ignore requests to localhost. This is necessary
   # even if WebMock's allow_localhost is set to true.
