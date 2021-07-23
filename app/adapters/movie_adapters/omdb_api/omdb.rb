@@ -12,12 +12,22 @@ class Omdb
 
   def find_by_title_and_year(title, year)
     response = find_movie_request.find_movie_by_title_and_year(title, year)
-    response_builder.build_movie_from_response(response) unless response.nil?
+    begin
+      response_builder.build_movie_from_response(response) unless response.nil?
+    rescue MovieNotFoundError
+      Rails.logger.warn("Cannot find movie with title: #{title} and year: #{year.nil? ? "without year" : year}")
+      return
+    end
   end
 
   def search_by_title_and_year(title, year)
     response = search_movie_request.search_movies_by_title_and_year(title, year)
-    response_builder.build_movie_search_result_from_response(response) unless response.nil?
+    begin
+      response_builder.build_movie_search_result_from_response(response) unless response.nil?
+    rescue MovieNotFoundError
+      Rails.logger.warn("Cannot find movie with title: #{title} and year: #{year.nil? ? "without year" : year}")
+      return
+    end
   end
 
   private

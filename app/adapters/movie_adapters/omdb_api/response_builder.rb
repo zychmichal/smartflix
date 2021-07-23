@@ -1,10 +1,11 @@
 require_relative 'response_structs'
+require_relative 'movie_not_found_error'
 
 class ResponseBuilder
 
   def build_movie_from_response(response)
     data = JSON.parse(response.body)
-    return unless data['Response'] == 'True'
+    raise MovieNotFoundError unless data['Response'] == 'True'
 
     prepared_data = prepare_data_from_response(data)
     build_movie(prepared_data)
@@ -13,7 +14,7 @@ class ResponseBuilder
   def build_movie_search_result_from_response(response)
     data = JSON.parse(response.body)
     movies_search_result = []
-    return unless data['Response'] == 'True'
+    raise MovieNotFoundError unless data['Response'] == 'True'
 
     data['Search'].each { |movie| movies_search_result << MovieSearchResult.new(movie['Title'], movie['Year']) }
     movies_search_result

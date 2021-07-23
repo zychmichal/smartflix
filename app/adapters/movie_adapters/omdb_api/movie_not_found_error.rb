@@ -1,0 +1,2 @@
+class MovieNotFoundError < StandardError
+end
