@@ -1,0 +1,51 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop
+
+AllCops:
+  TargetRubyVersion: 3.0.1
+  Exclude:
+    - "vendor/**/*"
+    - "**/tmp/**/*"
+    - "**/db/**/*"
+    - "**/bin/**/*"
+    - "**/config/**/*"
+  DisplayCopNames: true
+  StyleGuideCopsOnly: false
+  NewCops: enable
+
+Layout/LineLength:
+  Description: Limit lines to 120 characters.
+  Enabled: true
+  Max: 120
+
+Layout/EmptyLinesAroundClassBody:
+  Description: Keeps track of empty lines around class bodies.
+  Enabled: true
+  EnforcedStyle: no_empty_lines
+  SupportedStyles:
+    - empty_lines
+    - no_empty_lines
+
+RSpec/ContextWording:
+  Prefixes:
+    - when
+    - with
+    - without
+    - if
+    - for
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+  Max: 10
+
+RSpec/MultipleExpectations:
+  Max: 2
+
+Style/Documentation:
+  Enabled: false
+
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false

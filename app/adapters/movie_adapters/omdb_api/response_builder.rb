@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require_relative 'response_structs'
 require_relative 'movie_not_found_error'
 
 class ResponseBuilder
-
   def build_movie_from_response(response)
     data = JSON.parse(response.body)
     raise MovieNotFoundError unless data['Response'] == 'True'
@@ -27,10 +28,9 @@ class ResponseBuilder
   end
 
   def prepare_data_from_response(data)
-    data.transform_keys!{|key| key.underscore.to_sym }
+    data.transform_keys! { |key| key.underscore.to_sym }
     data[:movie_type] = data.delete(:type)
     data[:title] = data[:title].titleize
     data.except(:response)
   end
-
 end

@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require_relative 'uri_omdb_builder'
 
 class FindMovieRequest
-
   include UriOmdbBuilder
 
   def find_movie_by_title_and_year(title, year = nil)
@@ -15,5 +16,4 @@ class FindMovieRequest
   def build_uri_by_title(title, year = nil)
     year.nil? ? build_uri(t: title) : build_uri(t: title, y: year)
   end
-
 end
