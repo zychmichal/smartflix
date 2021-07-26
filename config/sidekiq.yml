@@ -5,8 +5,14 @@
   - default
   - movies
 :schedule:
-  AddOneFakeMovie:
-    cron: '0 0 0 2 * *' # every 2nd day of month at 12:00 pm
+  UpdateAllMovies:
+    cron: '0 0 7 * * *' # every day at 7:00 am
     #cron: '0 * * * * *' # cron for test (every minute)
-    class: CreateMovieWorker
+    class: UpdateMoviesWorker
+    queue: movies
+
+  DeleteNotUpdateMovies:
+    cron: '0 0 8 * * *' # every day at 8:00 am
+    #cron: '0 * * * * *' # cron for test (every minute)
+    class: DeleteMoviesWorker
     queue: movies
