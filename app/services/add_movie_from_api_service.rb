@@ -3,10 +3,10 @@
 require 'net/http'
 require 'uri'
 require 'json'
-require_relative '../adapters/movie_adapters/omdb_api/omdb'
+require_relative '../adapters/omdb'
 
 class AddMovieFromApiService
-  def initialize(movie_adapter = Omdb.new)
+  def initialize(movie_adapter = Omdb::Client.new)
     @movie_adapter = movie_adapter
   end
 
