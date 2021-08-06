@@ -3,16 +3,81 @@
 require 'rails_helper'
 
 RSpec.describe AddMovieFromApiService do
-  subject(:add_movie_service) { described_class.new }
+  subject(:add_movie_service) { described_class.new(adapter) }
 
+  let(:adapter) { Omdb::Client.new }
   let(:title) { 'Harry Potter' }
+  let(:year) { nil }
 
-  context 'when adds single movie' do
-    context 'when OMDB API find movie with only title' do
-      it 'creates movie without year in request' do
-        VCR.use_cassette('omdbapi_title') do
-          expect { add_movie_service.add_movie_by_title_and_year(title) }.to change(Movie, :count).from(0).to(1)
-          expect(Movie.first.title).to eq('Harry Potter And The Deathly Hallows: Part 2')
+  describe '#add_movie_by_title_and_year' do
+    let(:result_movie_struct) { Omdb::ResponseStructs::MovieStruct.new(title: title, year: year) }
+
+    before { allow(adapter).to receive(:find_by).with(title: title, year: year).and_return(result_movie_struct) }
+
+    context 'when only title is added' do
+      it 'creates movie' do
+        expect(adapter).to receive(:find_by).with(title: title, year: year).and_return(result_movie_struct)
+
+        expect { add_movie_service.add_movie_by_title_and_year(title) }.to change(Movie, :count).from(0).to(1)
+        expect(Movie.first.title).to eq('Harry Potter')
+      end
+    end
+
+    context 'when title and year is added' do
+      let(:year) { 2010 }
+
+      it 'creates movie' do
+        expect(adapter).to receive(:find_by).with(title: title, year: year).and_return(result_movie_struct)
+
+        expect { add_movie_service.add_movie_by_title_and_year(title, year) }.to change(Movie, :count).from(0).to(1)
+        expect(Movie.first.title).to eq('Harry Potter')
+        expect(Movie.first.year).to eq(year)
+      end
+    end
+
+    context 'when adapter not send movie' do
+      let(:result_movie_struct) { nil }
+
+      it 'does not add movie to database' do
+        expect(adapter).to receive(:find_by).with(title: title, year: year).and_return(result_movie_struct)
+
+        expect { add_movie_service.add_movie_by_title_and_year(title) }.not_to change(Movie, :count)
+      end
+    end
+  end
+
+  describe '#add_movies_by_title_and_year' do
+    let(:another_title) { 'HP' }
+    let(:movie_search_results) do
+      [Omdb::ResponseStructs::MovieSearchResult.new(title, year),
+       Omdb::ResponseStructs::MovieSearchResult.new(another_title, year)]
+    end
+
+    before do
+      allow(adapter).to receive(:search_by_title_and_year).with(title, year).and_return(movie_search_results)
+      allow(add_movie_service).to receive(:add_movie_by_title_and_year)
+    end
+
+    context 'when API find movies' do
+      context 'when year is not provided' do
+        it 'creates movie from first page of response' do
+          expect(adapter).to receive(:search_by_title_and_year).with(title, year).and_return(movie_search_results)
+          expect(add_movie_service).to receive(:add_movie_by_title_and_year).with(title, year).ordered
+          expect(add_movie_service).to receive(:add_movie_by_title_and_year).with(another_title, year).ordered
+
+          add_movie_service.add_movies_by_title_and_year(title)
+        end
+      end
+
+      context 'when year is also provided' do
+        let(:year) { 2010 }
+
+        it 'creates movie from first page of response' do
+          expect(adapter).to receive(:search_by_title_and_year).with(title, year).and_return(movie_search_results)
+          expect(add_movie_service).to receive(:add_movie_by_title_and_year).with(title, year).ordered
+          expect(add_movie_service).to receive(:add_movie_by_title_and_year).with(another_title, year).ordered
+
+          add_movie_service.add_movies_by_title_and_year(title, year)
         end
       end
     end
@@ -20,55 +85,13 @@ RSpec.describe AddMovieFromApiService do
     context 'when API not found title' do
       let(:title) { 'not existing movie' }
 
-      it "doesn't create movie when movie title doesn't found in omdbapi" do
-        VCR.use_cassette('omdbapi_not_exist_title') do
-          expect { add_movie_service.add_movie_by_title_and_year(title) }.to change(Movie, :count).by(0)
-        end
-      end
-    end
+      let(:movie_search_results) { nil }
 
-    context 'when add single movie from OMDB API with year' do
-      let(:year) { 2010 }
+      it 'does not call add_movie_by_title_and_year' do
+        expect(adapter).to receive(:search_by_title_and_year).with(title, year).and_return(movie_search_results)
+        expect(add_movie_service).not_to receive(:add_movie_by_title_and_year)
 
-      it 'adds movie to database with year in request if response is success' do
-        VCR.use_cassette('omdbapi_title_with_year') do
-          expect { add_movie_service.add_movie_by_title_and_year(title, year) }.to change(Movie, :count).from(0).to(1)
-          expect(Movie.first.title).to eq('Harry Potter And The Deathly Hallows: Part 1')
-        end
-      end
-    end
-  end
-
-  context 'when use searching more movies in OMDB API' do
-    context 'when API find title' do
-      let(:title) { 'Harry' }
-
-      it 'creates movie from first page of response' do
-        VCR.use_cassette('omdbapi_response_for_more_movies') do
-          expect { add_movie_service.add_movies_by_title_and_year(title) }.to change(Movie, :count).from(0).to(10)
-          Movie.all.each { |movie| expect(movie.title).to match(title) }
-        end
-      end
-    end
-
-    context 'when OMDB API finds movie with title and year' do
-      let(:year) { 2015 }
-
-      it 'adds movie to database with year in request if response is success' do
-        VCR.use_cassette('omdbapi_response_for_more_movie_with_year') do
-          expect { add_movie_service.add_movies_by_title_and_year(title, year) }.to change(Movie, :count).from(0).to(3)
-          Movie.all.each { |movie| expect(movie.title).to match(title) }
-        end
-      end
-    end
-
-    context "when API doesn't find title" do
-      let(:title) { 'not existing movie' }
-
-      it "doesn't create movie when movie title doesn't find in omdbapi" do
-        VCR.use_cassette('omdbapi_not_exist_title_for_more_movies') do
-          expect { add_movie_service.add_movies_by_title_and_year(title) }.to change(Movie, :count).by(0)
-        end
+        add_movie_service.add_movies_by_title_and_year(title)
       end
     end
   end
