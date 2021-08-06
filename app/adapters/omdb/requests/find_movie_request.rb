@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'uri_omdb_builder'
-
 module Omdb
   module Requests
     class FindMovieRequest

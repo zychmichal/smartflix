@@ -2,9 +2,9 @@
 
 class MoviesController < ApplicationController
   def show
-    # przemyslec zmiane metody
     title = params[:title].titleize
-    # full text search -> jest jakims gem do bardziej zaawansowanych postgresowych (pg_search)
+    # TODO: full text search (gem pg_search)
+    # https://pganalyze.com/blog/full-text-search-ruby-rails-postgres
     movie = Movie.find_by('title like ?', "%#{title}%")
 
     if movie

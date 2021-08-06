@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Omdb
-  class ResponseStructs
+  module ResponseStructs
     MovieSearchResult = Struct.new(:title, :year)
 
     MovieStruct = Struct.new(:title,

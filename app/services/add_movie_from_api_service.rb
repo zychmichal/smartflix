@@ -19,6 +19,7 @@ class AddMovieFromApiService
   def add_movies_by_title_and_year(title, year = nil)
     movies = @movie_adapter.search_by_title_and_year(title, year)
 
+    # INFO: safe navigator operator -> https://mitrev.net/ruby/2015/11/13/the-operator-in-ruby/
     movies&.each { |movie| add_movie_by_title_and_year(movie.title, movie.year) }
   end
 
