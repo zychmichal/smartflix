@@ -49,3 +49,6 @@ Style/Documentation:
 
 Rails/UniqueValidationWithoutIndex:
   Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
