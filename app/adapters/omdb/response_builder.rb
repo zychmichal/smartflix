@@ -14,13 +14,11 @@ module Omdb
 
     def build_movie_search_result_from_response(response)
       data = JSON.parse(response.body)
-      movies_search_result = []
-      raise Omdb::MovieNotFoundError unless data['Response'] == 'True'
+      raise Omdb::MovieNotFoundError if data['Response'] == 'False'
 
-      data['Search'].each do |movie|
-        movies_search_result << Omdb::ResponseStructs::MovieSearchResult.new(movie['Title'], movie['Year'])
+      data['Search'].map do |movie|
+        Omdb::ResponseStructs::MovieSearchResult.new(movie['Title'], movie['Year'])
       end
-      movies_search_result
     end
 
     private
