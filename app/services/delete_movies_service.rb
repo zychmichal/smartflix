@@ -1,5 +1,6 @@
-class DeleteMoviesService
+# frozen_string_literal: true
 
+class DeleteMoviesService
   def delete_outdated_movies
     Movie.find_each { |movie| movie.delete if not_updated_since_two_days?(movie) }
   end

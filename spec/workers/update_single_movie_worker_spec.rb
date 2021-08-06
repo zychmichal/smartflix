@@ -4,10 +4,12 @@ require 'rails_helper'
 
 RSpec.describe UpdateSingleMovieWorker, type: :worker do
   subject(:update_single_movie_worker) { described_class.new.perform(movie_id) }
+
   let(:service) { UpdateMovieFromApiService.new }
 
   let(:movie_id) { 1 }
-  let(:movie) { Movie.new(title: 'Troy', id: movie_id)}
+  let(:movie) { Movie.new(title: 'Troy', id: movie_id) }
+
   before do
     allow(Movie).to receive(:find_by).with(id: movie_id).and_return(movie)
     allow(UpdateMovieFromApiService).to receive(:new).and_return(service)

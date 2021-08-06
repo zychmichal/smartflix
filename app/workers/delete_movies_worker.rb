@@ -7,5 +7,4 @@ class DeleteMoviesWorker
   def perform
     DeleteMoviesService.new.delete_outdated_movies
   end
-
 end
