@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe AddMovieFromApiService do
   subject(:add_movie_service) { described_class.new(adapter) }
 
-  let(:adapter) { Omdb::Client.new }
+  let(:adapter) { instance_double(Omdb::Client) }
   let(:title) { 'Harry Potter' }
   let(:year) { nil }
 
@@ -46,6 +46,7 @@ RSpec.describe AddMovieFromApiService do
     end
   end
 
+  # rubocop:disable RSpec/SubjectStub
   describe '#add_movies_by_title_and_year' do
     let(:another_title) { 'HP' }
     let(:movie_search_results) do
@@ -54,6 +55,7 @@ RSpec.describe AddMovieFromApiService do
     end
 
     before do
+      # zbedne allow
       allow(adapter).to receive(:search_by_title_and_year).with(title, year).and_return(movie_search_results)
       allow(add_movie_service).to receive(:add_movie_by_title_and_year)
     end
@@ -95,4 +97,5 @@ RSpec.describe AddMovieFromApiService do
       end
     end
   end
+  # rubocop:enable RSpec/SubjectStub
 end

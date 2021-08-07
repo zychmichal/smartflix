@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-# require_relative 'requests/find_movie_request'
-# require_relative 'requests/search_movie_request'
-# require_relative 'response_builder'
-
 module Omdb
   class Client
     def initialize
