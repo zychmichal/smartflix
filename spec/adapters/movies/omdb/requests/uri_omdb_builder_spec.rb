@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Omdb::Requests::UriOmdbBuilder do
+RSpec.describe Movies::Omdb::Requests::UriOmdbBuilder do
   let(:object) { Object.new }
 
   before do

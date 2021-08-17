@@ -2,12 +2,12 @@
 
 require 'rails_helper'
 
-RSpec.describe Omdb::Client do
+RSpec.describe Movies::Omdb::Client do
   subject(:omdb_client) { described_class.new }
 
   let(:title) { 'Harry Potter' }
   let(:movie) do
-    Omdb::ResponseStructs::MovieStruct.new(title: 'Harry Potter And The Deathly Hallows: Part 2', year: '2011')
+    Movies::Omdb::ResponseStructs::MovieStruct.new(title: 'Harry Potter And The Deathly Hallows: Part 2', year: '2011')
   end
 
   context 'when adds single movie' do
@@ -24,13 +24,10 @@ RSpec.describe Omdb::Client do
 
     context 'when API not found title' do
       let(:title) { 'not existing movie' }
-      let(:warn_message) { 'Cannot find movie with title: not existing movie and year: without year' }
 
       it "doesn't create movie when movie title doesn't found in omdbapi" do
         VCR.use_cassette('omdbapi_not_exist_title') do
-          expect(Rails.logger).to receive(:warn).with(warn_message)
-
-          expect(omdb_client.find_by(title: title, year: nil)).to be_nil
+          expect { omdb_client.find_by(title: title, year: nil) }.to raise_error(Movies::MovieNotFoundError)
         end
       end
     end
@@ -38,7 +35,8 @@ RSpec.describe Omdb::Client do
     context 'when add single movie from OMDB API with year' do
       let(:year) { 2010 }
       let(:movie) do
-        Omdb::ResponseStructs::MovieStruct.new(title: 'Harry Potter And The Deathly Hallows: Part 1', year: '2010')
+        Movies::Omdb::ResponseStructs::MovieStruct.new(title: 'Harry Potter And The Deathly Hallows: Part 1',
+                                                       year: '2010')
       end
 
       it 'adds movie to database with year in request if response is success' do
@@ -81,13 +79,10 @@ RSpec.describe Omdb::Client do
 
     context "when API doesn't find title" do
       let(:title) { 'not existing movie' }
-      let(:warn_message) { 'Cannot find movie with title: not existing movie and year: without year' }
 
       it "doesn't create movie when movie title doesn't find in omdbapi" do
         VCR.use_cassette('omdbapi_not_exist_title_for_more_movies') do
-          expect(Rails.logger).to receive(:warn).with(warn_message)
-
-          expect(omdb_client.search_by_title_and_year(title, nil)).to be_nil
+          expect { omdb_client.search_by_title_and_year(title, nil) }.to raise_error(Movies::MovieNotFoundError)
         end
       end
     end

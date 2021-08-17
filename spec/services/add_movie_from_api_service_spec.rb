@@ -5,12 +5,12 @@ require 'rails_helper'
 RSpec.describe AddMovieFromApiService do
   subject(:add_movie_service) { described_class.new(adapter) }
 
-  let(:adapter) { instance_double(Omdb::Client) }
+  let(:adapter) { instance_double(Movies::Omdb::Client) }
   let(:title) { 'Harry Potter' }
   let(:year) { nil }
 
   describe '#add_movie_by_title_and_year' do
-    let(:result_movie_struct) { Omdb::ResponseStructs::MovieStruct.new(title: title, year: year) }
+    let(:result_movie_struct) { Movies::Omdb::ResponseStructs::MovieStruct.new(title: title, year: year) }
 
     before { allow(adapter).to receive(:find_by).with(title: title, year: year).and_return(result_movie_struct) }
 
@@ -50,8 +50,8 @@ RSpec.describe AddMovieFromApiService do
   describe '#add_movies_by_title_and_year' do
     let(:another_title) { 'HP' }
     let(:movie_search_results) do
-      [Omdb::ResponseStructs::MovieSearchResult.new(title, year),
-       Omdb::ResponseStructs::MovieSearchResult.new(another_title, year)]
+      [Movies::Omdb::ResponseStructs::MovieSearchResult.new(title, year),
+       Movies::Omdb::ResponseStructs::MovieSearchResult.new(another_title, year)]
     end
 
     before do
@@ -87,11 +87,12 @@ RSpec.describe AddMovieFromApiService do
     context 'when API not found title' do
       let(:title) { 'not existing movie' }
 
-      let(:movie_search_results) { nil }
+      let(:warn_message) { 'Cannot find movie with title: not existing movie and year: without year' }
 
       it 'does not call add_movie_by_title_and_year' do
-        expect(adapter).to receive(:search_by_title_and_year).with(title, year).and_return(movie_search_results)
+        expect(adapter).to receive(:search_by_title_and_year).with(title, year).and_raise(Movies::MovieNotFoundError)
         expect(add_movie_service).not_to receive(:add_movie_by_title_and_year)
+        expect(Rails.logger).to receive(:warn).with(warn_message)
 
         add_movie_service.add_movies_by_title_and_year(title)
       end

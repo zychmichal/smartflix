@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Omdb
+module Movies
   class MovieNotFoundError < StandardError
   end
 end
