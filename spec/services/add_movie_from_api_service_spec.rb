@@ -16,7 +16,7 @@ RSpec.describe AddMovieFromApiService do
 
     context 'when only title is added' do
       it 'creates movie' do
-        expect(adapter).to receive(:find_by).with(title: title, year: year).and_return(result_movie_struct)
+        expect(adapter).to receive(:find_by).with(title: title, year: year)
 
         expect { add_movie_service.add_movie_by_title_and_year(title) }.to change(Movie, :count).from(0).to(1)
         expect(Movie.first.title).to eq('Harry Potter')
@@ -27,7 +27,7 @@ RSpec.describe AddMovieFromApiService do
       let(:year) { 2010 }
 
       it 'creates movie' do
-        expect(adapter).to receive(:find_by).with(title: title, year: year).and_return(result_movie_struct)
+        expect(adapter).to receive(:find_by).with(title: title, year: year)
 
         expect { add_movie_service.add_movie_by_title_and_year(title, year) }.to change(Movie, :count).from(0).to(1)
         expect(Movie.first.title).to eq('Harry Potter')
@@ -35,11 +35,16 @@ RSpec.describe AddMovieFromApiService do
       end
     end
 
-    context 'when adapter not send movie' do
-      let(:result_movie_struct) { nil }
+    context 'when adapter not found movie' do
+      let(:warn_message) { "Cannot find movie with title: #{title} and year: without year" }
+
+      before do
+        allow(adapter).to receive(:find_by).with(title: title, year: year).and_raise(Movies::MovieNotFoundError)
+      end
 
       it 'does not add movie to database' do
-        expect(adapter).to receive(:find_by).with(title: title, year: year).and_return(result_movie_struct)
+        expect(adapter).to receive(:find_by).with(title: title, year: year)
+        expect(Rails.logger).to receive(:warn).with(warn_message)
 
         expect { add_movie_service.add_movie_by_title_and_year(title) }.not_to change(Movie, :count)
       end
@@ -55,7 +60,6 @@ RSpec.describe AddMovieFromApiService do
     end
 
     before do
-      # zbedne allow
       allow(adapter).to receive(:search_by_title_and_year).with(title, year).and_return(movie_search_results)
       allow(add_movie_service).to receive(:add_movie_by_title_and_year)
     end
@@ -63,7 +67,7 @@ RSpec.describe AddMovieFromApiService do
     context 'when API find movies' do
       context 'when year is not provided' do
         it 'creates movie from first page of response' do
-          expect(adapter).to receive(:search_by_title_and_year).with(title, year).and_return(movie_search_results)
+          expect(adapter).to receive(:search_by_title_and_year).with(title, year)
           expect(add_movie_service).to receive(:add_movie_by_title_and_year).with(title, year).ordered
           expect(add_movie_service).to receive(:add_movie_by_title_and_year).with(another_title, year).ordered
 
@@ -75,7 +79,7 @@ RSpec.describe AddMovieFromApiService do
         let(:year) { 2010 }
 
         it 'creates movie from first page of response' do
-          expect(adapter).to receive(:search_by_title_and_year).with(title, year).and_return(movie_search_results)
+          expect(adapter).to receive(:search_by_title_and_year).with(title, year)
           expect(add_movie_service).to receive(:add_movie_by_title_and_year).with(title, year).ordered
           expect(add_movie_service).to receive(:add_movie_by_title_and_year).with(another_title, year).ordered
 
@@ -89,8 +93,12 @@ RSpec.describe AddMovieFromApiService do
 
       let(:warn_message) { 'Cannot find movie with title: not existing movie and year: without year' }
 
+      before do
+        allow(adapter).to receive(:search_by_title_and_year).with(title, year).and_raise(Movies::MovieNotFoundError)
+      end
+
       it 'does not call add_movie_by_title_and_year' do
-        expect(adapter).to receive(:search_by_title_and_year).with(title, year).and_raise(Movies::MovieNotFoundError)
+        expect(adapter).to receive(:search_by_title_and_year).with(title, year)
         expect(add_movie_service).not_to receive(:add_movie_by_title_and_year)
         expect(Rails.logger).to receive(:warn).with(warn_message)
 
