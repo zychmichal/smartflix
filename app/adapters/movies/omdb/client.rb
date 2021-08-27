@@ -3,7 +3,6 @@
 module Movies
   module Omdb
     class Client
-      # requests
       def initialize
         @response_builder = Movies::Omdb::ResponseBuilder.new
       end
@@ -13,14 +12,14 @@ module Movies
         response_builder.build_movie_from_response(response) unless response.nil?
       end
 
-      def search_by_title_and_year(title, year)
+      def search_by(title:, year:)
         response = Requests::SearchMovieRequest.new.search_movies_by_title_and_year(title, year)
         response_builder.build_movie_search_result_from_response(response) unless response.nil?
       end
 
       private
 
-      attr_reader :find_movie_request, :search_movie_request, :response_builder
+      attr_reader :response_builder
     end
   end
 end

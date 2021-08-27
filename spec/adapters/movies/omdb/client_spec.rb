@@ -56,7 +56,7 @@ RSpec.describe Movies::Omdb::Client do
 
       it 'creates movie from first page of response' do
         VCR.use_cassette('omdbapi_response_for_more_movies') do
-          result = omdb_client.search_by_title_and_year(title, nil)
+          result = omdb_client.search_by(title: title, year: nil)
 
           expect(result.count).to eq(10)
           result.each { |movie| expect(movie.title).to match(title) }
@@ -69,7 +69,7 @@ RSpec.describe Movies::Omdb::Client do
 
       it 'with year in request if response is success' do
         VCR.use_cassette('omdbapi_response_for_more_movie_with_year') do
-          result = omdb_client.search_by_title_and_year(title, year)
+          result = omdb_client.search_by(title: title, year: year)
 
           expect(result.count).to eq(3)
           result.each { |movie| expect(movie.title).to match(title) }
@@ -82,7 +82,7 @@ RSpec.describe Movies::Omdb::Client do
 
       it "doesn't create movie when movie title doesn't find in omdbapi" do
         VCR.use_cassette('omdbapi_not_exist_title_for_more_movies') do
-          expect { omdb_client.search_by_title_and_year(title, nil) }.to raise_error(Movies::MovieNotFoundError)
+          expect { omdb_client.search_by(title: title, year: nil) }.to raise_error(Movies::MovieNotFoundError)
         end
       end
     end

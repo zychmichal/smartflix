@@ -20,7 +20,7 @@ class AddMovieFromApiService
   end
 
   def add_movies_by_title_and_year(title, year = nil)
-    movies = @movie_adapter.search_by_title_and_year(title, year)
+    movies = @movie_adapter.search_by(title: title, year: year)
     movies.each { |movie| add_movie_by_title_and_year(movie.title, movie.year) }
   rescue Movies::MovieNotFoundError
     Rails.logger.warn("Cannot find movie with title: #{title} and year: #{year.nil? ? 'without year' : year}")

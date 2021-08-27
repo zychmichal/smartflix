@@ -60,14 +60,14 @@ RSpec.describe AddMovieFromApiService do
     end
 
     before do
-      allow(adapter).to receive(:search_by_title_and_year).with(title, year).and_return(movie_search_results)
+      allow(adapter).to receive(:search_by).with(title: title, year: year).and_return(movie_search_results)
       allow(add_movie_service).to receive(:add_movie_by_title_and_year)
     end
 
     context 'when API find movies' do
       context 'when year is not provided' do
         it 'creates movie from first page of response' do
-          expect(adapter).to receive(:search_by_title_and_year).with(title, year)
+          expect(adapter).to receive(:search_by).with(title: title, year: year)
           expect(add_movie_service).to receive(:add_movie_by_title_and_year).with(title, year).ordered
           expect(add_movie_service).to receive(:add_movie_by_title_and_year).with(another_title, year).ordered
 
@@ -79,7 +79,7 @@ RSpec.describe AddMovieFromApiService do
         let(:year) { 2010 }
 
         it 'creates movie from first page of response' do
-          expect(adapter).to receive(:search_by_title_and_year).with(title, year)
+          expect(adapter).to receive(:search_by).with(title: title, year: year)
           expect(add_movie_service).to receive(:add_movie_by_title_and_year).with(title, year).ordered
           expect(add_movie_service).to receive(:add_movie_by_title_and_year).with(another_title, year).ordered
 
@@ -94,11 +94,11 @@ RSpec.describe AddMovieFromApiService do
       let(:warn_message) { 'Cannot find movie with title: not existing movie and year: without year' }
 
       before do
-        allow(adapter).to receive(:search_by_title_and_year).with(title, year).and_raise(Movies::MovieNotFoundError)
+        allow(adapter).to receive(:search_by).with(title: title, year: year).and_raise(Movies::MovieNotFoundError)
       end
 
       it 'does not call add_movie_by_title_and_year' do
-        expect(adapter).to receive(:search_by_title_and_year).with(title, year)
+        expect(adapter).to receive(:search_by).with(title: title, year: year)
         expect(add_movie_service).not_to receive(:add_movie_by_title_and_year)
         expect(Rails.logger).to receive(:warn).with(warn_message)
 
